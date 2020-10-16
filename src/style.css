@@ -1,6 +1,9 @@
 body {
   font-family: sans-serif;
 }
+h1 {
+  text-transform: capitalize;
+}
 h1,
 h3 {
   color: purple;
