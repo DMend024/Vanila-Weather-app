@@ -12,8 +12,9 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-">
 
+
+<script src="https://kit.fontawesome.com/8102dd2dc2.js" crossorigin="anonymous"></script>
   </head>
   <body>
         <div id="app"></div>
@@ -38,27 +39,34 @@
             <div class="row">
                 <div class="col-6">
                     <h2>
-                        <i class="temp-icon"></i>
+                        <i id="temp-icon"></i>
                     </h2>
                 </div>
         
                 <div class="col-6">
-                    <h3 id="today-date">
-                    </h3>
+                    <ul>
+<h3 id="today-date">
+
+</h3>
                     <span class="temp"></span>
+
                     <span class="degMeasure" id="current-temp">
         
                         <h3 id="temp-show"> </h3>
+<li class="min-max"><h6 id="high-temp"></h6><h6 id="low-temp"></h6></li>
                         <br />
                         <a href="#" id="celsius-link" class="active">°C </a> /
                         <a href="#" id="fahrenheit-link" class="active">°F</a>
                     </span>
-                    <br />
-                    <span id="wind-speed">Windspeed: </span>
-                    <br />
-                    <span id="humidity">Humidity: </span>
-                    <br />
+                    
+                        <li id="wind-speed">Windspeed: </li>
+            
+                    <li id="humidity">Humidity: </li>
+                    <li id="precipitation">Precipitation: </li>
+<li>
                     <button type="button" id="current-button">Current</button>
+    </li>
+                </ul>
                 </div>
         
             </div>

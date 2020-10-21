@@ -8,9 +8,8 @@ h1,
 h3 {
   color: purple;
 }
-
-hr {
-  background-color: purple;
+ul {
+  list-style: none;
 }
 i {
   font-size: 34px;
@@ -22,11 +21,8 @@ h6 {
   padding: 30px 0px;
   text-align: center;
 }
-
-.card-title {
-  line-height: 30px;
-  font-size: 16px;
-  color: rgb(206, 46, 206);
+.min-max {
+  text-align: inline;
 }
 .current-temp .active {
   color: black;
