@@ -1,5 +1,7 @@
 body {
-  font-family: sans-serif;
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1 {
   text-transform: capitalize;
@@ -26,7 +28,6 @@ h6 {
 }
 .current-temp .active {
   color: black;
-  cursor: default;
 }
 .current-temp .active:hover {
   text-decoration: none;
