@@ -1,4 +1,3 @@
-
 function dateToday(date) {
   let hour = date.getHours();
   if (hour < 10) {
@@ -44,8 +43,7 @@ function displayLocalTemp(respond) {
   low.innerHTML=`LO ${lowTemp}°C`;
   iconImage.setAttribute("src",`http://openweathermap.org/img/wn/${icon}@2x.png`);
   cityTempDescriptor.innerHTML=`Description: ${description}`;
-locationElement.innerHTML=`${currentLocation}`;
-
+  locationElement.innerHTML=`${currentLocation}`;
 }
 
 function findCoords(position) {
@@ -98,35 +96,31 @@ function showCity(event) {
 
 function celsiusConvert(event) {
   event.preventDefault()
-
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   let temperature=document.querySelector("#temp-show");
   temperature.innerHTML = `${celsiusTemperature}°C`;
   high.innerHTML=`HI ${highTemp}°C`;
   low.innerHTML=`LO ${lowTemp}°C`;
-
 }
 
 function fahrenheitConvert(event) {     
   event.preventDefault();
-
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-let temperature=document.querySelector("#temp-show");
+  let temperature=document.querySelector("#temp-show");
   let fahrTemperature = Math.round((celsiusTemperature*9)/5+32);
   let fahrHighTemp=Math.round((highTemp*9)/5+32);
   let fahrLowTemp=Math.round((lowTemp*9)/5+32);
   temperature.innerHTML = `${fahrTemperature}°F`;
   high.innerHTML=`HI ${fahrHighTemp}°F`;
   low.innerHTML=`LO ${fahrLowTemp}°F`;
-  
-
 }
+
 function getLocal(event){
   event.preventDefault();
-navigator.geolocation.getCurrentPosition(findCoords);
-return displayLocalTemp;
+  navigator.geolocation.getCurrentPosition(findCoords);
+  return displayLocalTemp;
 }
 
 let celsiusTemperature=null;
@@ -139,7 +133,6 @@ navigator.geolocation.getCurrentPosition(findCoords);
 let button = document.querySelector("#current-button");
 button.addEventListener("click", getLocal);
 
-
 let form=document.querySelector("#search-city");
 form.addEventListener("submit",showCity);
 
@@ -147,7 +140,6 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", celsiusConvert);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", fahrenheitConvert);
-
 
 let now = new Date();
 let currentDate = document.querySelector("#today-date");

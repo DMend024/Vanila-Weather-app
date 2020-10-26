@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   padding-top: 58px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 26px;
   background-size: 1400px 800px;
 }
 
@@ -13,15 +14,24 @@ h1 {
 }
 h1,
 h3 {
+  font-size: 32px;
   color: purple;
 }
+
+a {
+  font-size: 20px;
+  font-weight: 600;
+}
 ul {
+  font-size: 20px;
   list-style: none;
+  line-height: 30px;
 }
 img {
   display: block;
-  margin: 0 auto;
-  font-size: 72px;
+  margin: 30px auto;
+  width: 180px;
+  height: 180px;
   text-align: center;
 }
 h6 {
@@ -30,6 +40,28 @@ h6 {
   text-align: center;
 }
 
+input {
+  font-weight: 500;
+  color: purple;
+  background-color: #fdcffd;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+input:hover {
+  color: #fdcffd;
+  background-color: purple;
+  transition: all 200ms ease-in-out;
+}
+button {
+  font-weight: 500;
+  color: purple;
+  background-color: #d9afd9;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+button:hover {
+  color: #d9afd9;
+  background-color: purple;
+  transition: all 200ms ease-in-out;
+}
 .date {
   text-align: center;
 }
@@ -39,7 +71,7 @@ h6 {
   padding: 0;
 }
 .tempInformation .active {
-  color: black;
+  color: purple;
   cursor: default;
 }
 .tempInformation .active:hover {
