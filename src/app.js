@@ -24,6 +24,8 @@ return `${day} ${hour}:${minutes}`;
 
 function displayLocalTemp(respond) {
   celsiusTemperature = Math.round(respond.data.main.temp);
+  let currentLocation = (respond.data.name);
+  let locationElement=document.querySelector ("#home-city");
   let windSpeed=document.querySelector("#wind-speed");
   let wind = (respond.data.wind.speed);
   let humidity=document.querySelector("#humidity");
@@ -42,7 +44,7 @@ function displayLocalTemp(respond) {
   low.innerHTML=`LO ${lowTemp}°C`;
   iconImage.setAttribute("src",`http://openweathermap.org/img/wn/${icon}@2x.png`);
   cityTempDescriptor.innerHTML=`Description: ${description}`;
-
+locationElement.innerHTML=`${currentLocation}`;
 
 }
 
@@ -121,7 +123,11 @@ let temperature=document.querySelector("#temp-show");
   
 
 }
-
+function getLocal(event){
+  event.preventDefault();
+navigator.geolocation.getCurrentPosition(findCoords);
+return displayLocalTemp;
+}
 
 let celsiusTemperature=null;
 let highTemp=null;
@@ -129,10 +135,9 @@ let lowTemp=null;
 let high=document.querySelector("#high-temp");
 let low=document.querySelector("#low-temp");
 
-
 navigator.geolocation.getCurrentPosition(findCoords);
 let button = document.querySelector("#current-button");
-button.addEventListener("click", displayLocalTemp);
+button.addEventListener("click", getLocal);
 
 
 let form=document.querySelector("#search-city");

@@ -9,20 +9,16 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-
-<script src="https://kit.fontawesome.com/8102dd2dc2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8102dd2dc2.js" crossorigin="anonymous"></script>
   </head>
   <body>
-        <div id="app"></div>
+    <div id="app">
         <div class="container">
             <div class="row">
                 <div class="col-6">
                     <h1 id="home-city">
-                        Fresno, CA
                     </h1>
                 </div>
                 <div class="col-6">
@@ -42,42 +38,38 @@
                         <img src="" alt="" id="temp-icon" class ></i>
                     </h2>
                     <h3 class="date" id="today-date">
-                    
                     </h3>
-               
                 </div>
-        
                 <div class="col-6">
                     <ul class="tempInformation">
                     <span class="temp"></span>
-
                     <span class="degMeasure" id="current-temp">
-        
-                        <h3 id="temp-show"> </h3>
-<ul class="min-max"> <li  id="high-temp"></li>
-<li id="low-temp"></li></ul>
-                        <br />
-                        <a href="#" id="celsius-link" class="active">°C </a> /
-                        <a href="#" id="fahrenheit-link" class="active">°F</a>
+                    <h3 id="temp-show"> </h3>
+                    <ul class="min-max"> 
+                        <li  id="high-temp"></li>
+                        <li id="low-temp"></li>
+                    </ul>
+                    <br />
+                    <a href="#" id="celsius-link" class="active">°C </a> /
+                    <a href="#" id="fahrenheit-link" class="active">°F</a>
                     </span>
-                    
-                        <li id="wind-speed">Windspeed: </li>
-            
+                    <li id="wind-speed">Windspeed: </li>
                     <li id="humidity">Humidity: </li>
-<li id="weather-description">Description: </li>
-<li>
-<button type="button" id="current-button">Current</button>
-</li>
-                </ul>
+                    <li id="weather-description">Description: </li>
+                    <li>
+                    <button class="currentWeather" type="button" id="current-button">Current</button>
+                    </li>
+                    </ul>
                 </div>
         
             </div>
             
-            </div>
+        </div>
             <h6>
                 Coded by 
                 <a href="https://github.com/DMend024/Vanila-Weather-app">DMendoza</a>
             </h6>
-    <script src="src/app.js"></script>
-  </body>
+            <script src="src/app.js"></script>
+  </div>
+        </body>
 </html>
